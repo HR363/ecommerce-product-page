@@ -2,43 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneaker Company | Fall Limited Edition Sneakers</title>
+  <link rel="stylesheet" href="app.css">
 </head>
 <body>
+  <header>
+    <div class="container header-container">
+      <div class="header-left">
+        <div class="logo">
+          <img src="images/logo.svg" alt="Sneaker Company Logo">
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-right">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="avatar">
+          <img src="images/image-avatar.png" alt="User avatar">
+        </div>
+      </div>
+    </div>
+  </header>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <main>
+    <div class="container product-container">
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src="images/image-product-1.jpg" alt="Product-1 image">
+        </div>
+        <div class="thumbnails">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" class="thumbnail active">
+          <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="thumbnail">
+          <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="thumbnail">
+          <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="thumbnail">
+        </div>
+      </div>
 
-  Sneaker Company
+      <div class="product-info">
+        <p class="company-name">Sneaker Company</p>
+        <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+        <p class="product-description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they'll withstand everything the weather can offer.
+        </p>
 
-  Fall Limited Edition Sneakers
+        <div class="product-price">
+          <div class="price-discount">
+            <span class="current-price">$125.00</span>
+            <span class="discount">50%</span>
+          </div>
+          <span class="original-price">$250.00</span>
+        </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+        <div class="add-to-cart-section">
+          <div class="quantity-selector">
+            <button class="minus-btn" title="Decrease quantity"><i class="fas fa-minus"></i></button>
+            <span class="quantity">1</span>
+            <button class="plus-btn" title="Increase quantity"><i class="fas fa-plus"></i></button>
+          </div>
+          <button class="add-to-cart-btn">
+            <i class="fas fa-shopping-cart"></i>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="close-lightbox">&times;</button>
+      <div class="lightbox-main-image">
+        <img src="images/image-product-1.jpg" alt="Product image">
+      </div>
+      <div class="lightbox-thumbnails">
+        <img src="images/image-product-1-thumbnail.jpg" alt="Thumbnail 1" class="thumbnail active">
+        <img src="images/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="thumbnail">
+        <img src="images/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="thumbnail">
+        <img src="images/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="thumbnail">
+      </div>
+    </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
